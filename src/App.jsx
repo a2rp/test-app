@@ -5,7 +5,7 @@ const App = () => {
     return (
         <Styled.Wrapper>
             <Styled.Main>
-                <h1>23-06-2026 updated</h1>
+                <h1>25-07-2026 updated again</h1>
             </Styled.Main>
         </Styled.Wrapper>
     );
