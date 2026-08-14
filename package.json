@@ -1,15 +1,26 @@
 {
-    "name": "a2rp-test",
+    "name": "a2rp-lab",
     "private": true,
     "version": "1.0.0",
+    "description": "An experimental technology playground for creative coding, modern interfaces, AI concepts and web experiments.",
     "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
         "predeploy": "npm run build && copy dist\\index.html dist\\404.html",
-        "deploy": "npx gh-pages -d dist -b gh-pages"
+        "deploy": "gh-pages -d dist -b gh-pages"
     },
+    "keywords": [
+        "react",
+        "vite",
+        "styled-components",
+        "creative-coding",
+        "web-experiments",
+        "frontend"
+    ],
+    "author": "Ashish Ranjan",
+    "license": "MIT",
     "dependencies": {
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
