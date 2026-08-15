@@ -9,170 +9,186 @@ export const Styled = {
 
         .sectionHeader {
             display: grid;
-            grid-template-columns: 0.55fr 1.45fr;
+            grid-template-columns: 0.95fr 1.05fr;
             gap: 5rem;
-            margin-bottom: 90px;
+            align-items: end;
+            margin-bottom: 80px;
         }
 
-        .sectionIndex {
-            color: #55555e;
-            font-size: 0.62rem;
-            letter-spacing: 0.18em;
+        .sectionLabel {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 1.4rem;
+            color: #777782;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
         }
 
-        .headingBlock h2 {
-            max-width: 980px;
-            font-size: clamp(3.8rem, 6vw, 7rem);
+        .sectionHeader h2 {
+            max-width: 850px;
+            color: #e3e3e7;
+            font-size: clamp(3.5rem, 6vw, 6.8rem);
+            font-weight: 600;
             line-height: 0.92;
             letter-spacing: -0.06em;
-            font-weight: 600;
         }
 
-        .headingBlock h2 span {
+        .sectionHeader h2 span {
             display: block;
             color: #555560;
             font-weight: 400;
         }
 
-        .headingBlock p {
+        .sectionHeader > p {
             max-width: 520px;
-            margin-top: 2.4rem;
+            justify-self: end;
             color: #74747d;
             font-size: 0.92rem;
             line-height: 1.85;
         }
 
-        .stackMatrix {
+        .stackGrid {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             border-top: 1px solid rgba(255, 255, 255, 0.09);
             border-left: 1px solid rgba(255, 255, 255, 0.09);
         }
 
-        .stackGroup {
-            min-width: 0;
-            border-right: 1px solid rgba(255, 255, 255, 0.09);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.09);
-            background: #07070b;
-        }
-
-        .groupHeader {
-            min-height: 130px;
-            padding: 28px;
+        .stackCard {
+            position: relative;
+            min-height: 330px;
+            padding: 30px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(255, 255, 255, 0.025),
-                    transparent 60%
-                ),
-                #07070b;
-        }
-
-        .groupHeader > span {
-            color: #4c4c55;
-            font-size: 0.55rem;
-            letter-spacing: 0.15em;
-        }
-
-        .groupHeader h3 {
-            color: #cfcfd5;
-            font-size: clamp(1.8rem, 2.6vw, 3rem);
-            font-weight: 500;
-            letter-spacing: -0.04em;
-        }
-
-        .groupItems {
-            display: grid;
-        }
-
-        .stackItem {
-            min-height: 92px;
-            padding: 0 26px;
-            display: grid;
-            grid-template-columns: 42px 1fr auto;
-            gap: 1rem;
-            align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            overflow: hidden;
+            border-right: 1px solid rgba(255, 255, 255, 0.09);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+            background: rgba(255, 255, 255, 0.008);
             transition:
-                background 0.3s ease,
-                padding 0.3s ease;
+                background 0.35s ease,
+                transform 0.35s ease;
         }
 
-        .stackItem:last-child {
-            border-bottom: 0;
+        .stackCard::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: radial-gradient(
+                circle at top right,
+                rgba(255, 255, 255, 0.07),
+                transparent 42%
+            );
+            opacity: 0;
+            transition: opacity 0.35s ease;
         }
 
-        .stackItem:hover {
-            padding-left: 34px;
-            padding-right: 34px;
+        .stackCard::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: #d7d7dc;
+            transition: width 0.4s ease;
+        }
+
+        .stackCard:hover {
             background: rgba(255, 255, 255, 0.025);
+            transform: translateY(-4px);
         }
 
-        .itemIndex {
-            color: #404048;
-            font-size: 0.54rem;
-            letter-spacing: 0.13em;
+        .stackCard:hover::before {
+            opacity: 1;
         }
 
-        .stackItem strong {
-            color: #9d9da6;
-            font-size: 0.85rem;
-            font-weight: 500;
-            letter-spacing: 0.02em;
-            transition: color 0.3s ease;
+        .stackCard:hover::after {
+            width: 100%;
         }
 
-        .stackItem:hover strong {
-            color: #e1e1e5;
-        }
-
-        .itemStatus {
-            padding: 0.38rem 0.52rem;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 999px;
-            color: #4d4d56;
-            font-size: 0.48rem;
-            letter-spacing: 0.13em;
-        }
-
-        .stackFooter {
-            margin-top: 44px;
-            padding-top: 28px;
+        .cardTop {
+            position: relative;
+            z-index: 1;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.07);
         }
 
-        .stackStatus {
-            display: flex;
+        .cardIndex {
+            color: #4b4b54;
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.17em;
+        }
+
+        .stackIcon {
+            width: 44px;
+            height: 44px;
+            display: inline-flex;
             align-items: center;
-            gap: 0.65rem;
-            color: #5d5d66;
-            font-size: 0.58rem;
-            text-transform: uppercase;
-            letter-spacing: 0.14em;
-        }
-
-        .statusDot {
-            width: 6px;
-            height: 6px;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.11);
             border-radius: 50%;
-            background: #a8a8b2;
-            box-shadow: 0 0 9px rgba(255, 255, 255, 0.45);
+            color: #85858f;
+            background: rgba(255, 255, 255, 0.025);
+            font-size: 1rem;
+            transition:
+                color 0.3s ease,
+                background 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.3s ease;
         }
 
-        .stackFooter p {
-            max-width: 420px;
-            color: #4f4f58;
-            font-size: 0.72rem;
-            line-height: 1.7;
-            text-align: right;
+        .stackCard:hover .stackIcon {
+            color: #050509;
+            background: #f4f4f4;
+            border-color: #f4f4f4;
+            transform: rotate(-8deg) scale(1.06);
+        }
+
+        .cardContent {
+            position: relative;
+            z-index: 1;
+        }
+
+        .category {
+            display: block;
+            margin-bottom: 0.9rem;
+            color: #555560;
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .cardContent h3 {
+            margin-bottom: 1.1rem;
+            color: #d7d7dc;
+            font-size: clamp(1.8rem, 2.5vw, 2.7rem);
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: -0.045em;
+        }
+
+        .cardContent p {
+            max-width: 330px;
+            color: #696972;
+            font-size: 0.84rem;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 1050px) {
+            .stackGrid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .stackCard {
+                min-height: 300px;
+            }
         }
 
         @media (max-width: 900px) {
@@ -181,48 +197,32 @@ export const Styled = {
             .sectionHeader {
                 grid-template-columns: 1fr;
                 gap: 2rem;
-                margin-bottom: 65px;
+                margin-bottom: 60px;
             }
 
-            .stackMatrix {
-                grid-template-columns: 1fr;
+            .sectionHeader > p {
+                justify-self: start;
             }
         }
 
         @media (max-width: 560px) {
             padding: 80px 20px;
 
-            .headingBlock h2 {
+            .sectionHeader h2 {
                 font-size: clamp(3rem, 14vw, 4.8rem);
             }
 
-            .groupHeader {
-                min-height: 110px;
-                padding: 22px;
+            .stackGrid {
+                grid-template-columns: 1fr;
             }
 
-            .stackItem {
-                min-height: 82px;
-                padding: 0 20px;
-                grid-template-columns: 34px 1fr;
+            .stackCard {
+                min-height: 260px;
+                padding: 26px;
             }
 
-            .stackItem:hover {
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-
-            .itemStatus {
-                display: none;
-            }
-
-            .stackFooter {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .stackFooter p {
-                text-align: left;
+            .cardContent p {
+                max-width: none;
             }
         }
     `,

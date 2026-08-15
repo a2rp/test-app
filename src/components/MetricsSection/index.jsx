@@ -1,113 +1,70 @@
+import { FiActivity, FiCpu, FiLayers, FiZap } from "react-icons/fi";
+
 import { Styled } from "./styled";
 
 const metrics = [
     {
-        value: "24/7",
-        label: "Curiosity mode",
-        code: "SYS-CURIOSITY",
+        value: "04",
+        label: "Active Experiments",
+        text: "Interface studies and prototypes currently being explored.",
+        icon: FiActivity,
     },
     {
-        value: "∞",
-        label: "Ideas to test",
-        code: "SYS-IDEAS",
+        value: "06+",
+        label: "Core Technologies",
+        text: "A flexible stack for rapid frontend experimentation.",
+        icon: FiCpu,
     },
     {
         value: "100%",
-        label: "Experimental mindset",
-        code: "SYS-MINDSET",
+        label: "Built to Explore",
+        text: "Every concept exists to test, learn and evolve.",
+        icon: FiZap,
     },
     {
-        value: "01",
-        label: "Rule: keep learning",
-        code: "SYS-RULE",
+        value: "∞",
+        label: "Ideas Ahead",
+        text: "A continuously evolving space for future experiments.",
+        icon: FiLayers,
     },
 ];
 
 function MetricsSection() {
     return (
         <Styled.Wrapper>
-            <div className="gridOverlay" />
+            <div className="sectionHeader">
+                <span className="sectionLabel">02 / SYSTEM METRICS</span>
 
-            <div className="sectionTop">
-                <span className="sectionIndex">04 / LAB METRICS</span>
-
-                <div className="liveStatus">
-                    <span className="statusDot" />
-                    TELEMETRY ACTIVE
-                </div>
+                <p>
+                    A quick snapshot of the ideas, technologies and experimental
+                    systems running inside test-app.
+                </p>
             </div>
 
             <div className="metricsGrid">
-                {metrics.map((metric) => (
-                    <article className="metricCard" key={metric.code}>
-                        <div className="metricCode">{metric.code}</div>
+                {metrics.map((metric) => {
+                    const Icon = metric.icon;
 
-                        <strong>{metric.value}</strong>
+                    return (
+                        <article className="metricCard" key={metric.label}>
+                            <div className="metricTop">
+                                <span className="metricIcon">
+                                    <Icon />
+                                </span>
 
-                        <span className="metricLabel">{metric.label}</span>
-
-                        <div className="metricSignal">
-                            <span />
-                            <span />
-                            <span />
-                            <span />
-                            <span />
-                            <span />
-                        </div>
-                    </article>
-                ))}
-            </div>
-
-            <div className="telemetryPanel">
-                <div className="telemetryHeader">
-                    <span>LIVE_OUTPUT.log</span>
-                    <span>SESSION / 2026</span>
-                </div>
-
-                <div className="telemetryBody">
-                    <div className="telemetryCopy">
-                        <span className="terminalPrefix">&gt;</span>
-
-                        <p>
-                            The lab is not measured by how many ideas survive.
-                            It is measured by how much each experiment teaches.
-                        </p>
-                    </div>
-
-                    <div className="telemetryBars">
-                        <div className="barRow">
-                            <span>Research</span>
-                            <div className="bar">
-                                <span className="barFill researchBar" />
+                                <span className="metricSignal">LIVE</span>
                             </div>
-                            <strong>82%</strong>
-                        </div>
 
-                        <div className="barRow">
-                            <span>Building</span>
-                            <div className="bar">
-                                <span className="barFill buildBar" />
-                            </div>
-                            <strong>94%</strong>
-                        </div>
+                            <strong className="metricValue">
+                                {metric.value}
+                            </strong>
 
-                        <div className="barRow">
-                            <span>Breaking</span>
-                            <div className="bar">
-                                <span className="barFill breakBar" />
-                            </div>
-                            <strong>68%</strong>
-                        </div>
+                            <span className="metricLabel">{metric.label}</span>
 
-                        <div className="barRow">
-                            <span>Learning</span>
-                            <div className="bar">
-                                <span className="barFill learnBar" />
-                            </div>
-                            <strong>100%</strong>
-                        </div>
-                    </div>
-                </div>
+                            <p>{metric.text}</p>
+                        </article>
+                    );
+                })}
             </div>
         </Styled.Wrapper>
     );

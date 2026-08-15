@@ -80,6 +80,7 @@ export const Styled = {
             content: "";
             position: absolute;
             inset: 0;
+            z-index: 1;
             background-image:
                 linear-gradient(
                     rgba(255, 255, 255, 0.025) 1px,
@@ -91,6 +92,72 @@ export const Styled = {
                     transparent 1px
                 );
             background-size: 52px 52px;
+        }
+
+        .visualImage {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.12;
+            filter: grayscale(1) contrast(1.15) brightness(0.6);
+            transform: scale(1.02);
+            transition:
+                transform 0.8s ease,
+                opacity 0.6s ease,
+                filter 0.6s ease;
+        }
+
+        .visualImageOverlay {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(7, 7, 11, 0.2),
+                    rgba(7, 7, 11, 0.72)
+                ),
+                radial-gradient(
+                    circle at center,
+                    rgba(7, 7, 11, 0.05),
+                    rgba(7, 7, 11, 0.75)
+                );
+        }
+
+        .experimentCard:hover .visualImage {
+            opacity: 0.2;
+            filter: grayscale(0.65) contrast(1.15) brightness(0.72);
+            transform: scale(1.08);
+        }
+
+        .visualIcon {
+            position: absolute;
+            top: 56px;
+            right: 24px;
+            z-index: 5;
+            width: 42px;
+            height: 42px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.11);
+            border-radius: 50%;
+            background: rgba(5, 5, 9, 0.55);
+            backdrop-filter: blur(12px);
+            color: #777782;
+            font-size: 1rem;
+            transition:
+                color 0.3s ease,
+                background 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .experimentCard:hover .visualIcon {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(-8deg) scale(1.08);
         }
 
         .visualMeta {
@@ -463,6 +530,7 @@ export const Styled = {
             border: 1px solid rgba(255, 255, 255, 0.11);
             border-radius: 50%;
             color: #595962;
+            font-size: 1.05rem;
             transition:
                 background 0.3s ease,
                 color 0.3s ease,
@@ -472,7 +540,7 @@ export const Styled = {
         .experimentCard:hover .cardArrow {
             background: #f4f4f4;
             color: #050509;
-            transform: rotate(45deg);
+            transform: translateY(-2px);
         }
 
         .cardContent > p {

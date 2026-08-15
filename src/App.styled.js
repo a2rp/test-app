@@ -15,6 +15,8 @@ export const Styled = {
 
         main {
             width: 100%;
+            max-width: 1440px;
+            margin: auto;
         }
     `,
 };

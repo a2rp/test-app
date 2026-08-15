@@ -1,8 +1,8 @@
 {
-    "name": "a2rp-lab",
+    "name": "test-app",
     "private": true,
     "version": "1.0.0",
-    "description": "An experimental technology playground for creative coding, modern interfaces, AI concepts and web experiments.",
+    "description": "A modern experimental frontend playground for creative interfaces, interaction design, and web concepts.",
     "type": "module",
     "scripts": {
         "dev": "vite",
@@ -15,9 +15,9 @@
         "react",
         "vite",
         "styled-components",
-        "creative-coding",
-        "web-experiments",
-        "frontend"
+        "frontend",
+        "ui",
+        "web-experiments"
     ],
     "author": "Ashish Ranjan",
     "license": "MIT",

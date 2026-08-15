@@ -1,21 +1,50 @@
+import {
+    FiBox,
+    FiCode,
+    FiCpu,
+    FiFeather,
+    FiLayers,
+    FiZap,
+} from "react-icons/fi";
+
 import { Styled } from "./styled";
 
-const technologies = [
+const stackItems = [
     {
-        group: "Interface",
-        items: ["React", "JavaScript", "Styled Components", "Responsive UI"],
+        title: "React",
+        category: "Interface",
+        text: "Component-driven UI architecture for building reusable and interactive frontend systems.",
+        icon: FiLayers,
     },
     {
-        group: "Build",
-        items: ["Vite", "ESBuild", "GitHub Pages", "Git"],
+        title: "Vite",
+        category: "Tooling",
+        text: "Fast development tooling with optimized builds and a lightweight modern workflow.",
+        icon: FiZap,
     },
     {
-        group: "Creative",
-        items: ["Motion", "Interaction", "Visual Systems", "Creative Coding"],
+        title: "Styled Components",
+        category: "Styling",
+        text: "Scoped component styling for modular design systems and flexible interface experiments.",
+        icon: FiFeather,
     },
     {
-        group: "Exploration",
-        items: ["AI Concepts", "Prototypes", "Experiments", "Emerging Web"],
+        title: "React Icons",
+        category: "Visual UI",
+        text: "Consistent vector icons used throughout the interface for clear visual communication.",
+        icon: FiBox,
+    },
+    {
+        title: "JavaScript",
+        category: "Logic",
+        text: "Modern JavaScript powering interactions, data flow, animation logic and experimental behavior.",
+        icon: FiCode,
+    },
+    {
+        title: "Creative Systems",
+        category: "Experiments",
+        text: "A flexible layer for prototyping unconventional interfaces, motion and emerging web concepts.",
+        icon: FiCpu,
     },
 ];
 
@@ -23,60 +52,49 @@ function StackSection() {
     return (
         <Styled.Wrapper id="stack">
             <div className="sectionHeader">
-                <span className="sectionIndex">02 / TECHNOLOGY STACK</span>
+                <div>
+                    <span className="sectionLabel">04 / STACK</span>
 
-                <div className="headingBlock">
                     <h2>
-                        Tools change.
-                        <span>Curiosity stays.</span>
+                        Tools behind
+                        <span>the experiments.</span>
                     </h2>
-
-                    <p>
-                        The lab uses a focused modern stack, but every tool is
-                        treated as a means to test ideas, not as the idea
-                        itself.
-                    </p>
-                </div>
-            </div>
-
-            <div className="stackMatrix">
-                {technologies.map((technology, groupIndex) => (
-                    <article className="stackGroup" key={technology.group}>
-                        <div className="groupHeader">
-                            <span>
-                                SYS-{String(groupIndex + 1).padStart(2, "0")}
-                            </span>
-
-                            <h3>{technology.group}</h3>
-                        </div>
-
-                        <div className="groupItems">
-                            {technology.items.map((item, itemIndex) => (
-                                <div className="stackItem" key={item}>
-                                    <span className="itemIndex">
-                                        {String(itemIndex + 1).padStart(2, "0")}
-                                    </span>
-
-                                    <strong>{item}</strong>
-
-                                    <span className="itemStatus">READY</span>
-                                </div>
-                            ))}
-                        </div>
-                    </article>
-                ))}
-            </div>
-
-            <div className="stackFooter">
-                <div className="stackStatus">
-                    <span className="statusDot" />
-                    Systems operational
                 </div>
 
                 <p>
-                    New technologies are added when an experiment actually
-                    benefits from them.
+                    A focused frontend stack chosen for speed, modularity,
+                    experimentation and clean interface development.
                 </p>
+            </div>
+
+            <div className="stackGrid">
+                {stackItems.map((item, index) => {
+                    const Icon = item.icon;
+
+                    return (
+                        <article className="stackCard" key={item.title}>
+                            <div className="cardTop">
+                                <span className="cardIndex">
+                                    {String(index + 1).padStart(2, "0")}
+                                </span>
+
+                                <span className="stackIcon">
+                                    <Icon />
+                                </span>
+                            </div>
+
+                            <div className="cardContent">
+                                <span className="category">
+                                    {item.category}
+                                </span>
+
+                                <h3>{item.title}</h3>
+
+                                <p>{item.text}</p>
+                            </div>
+                        </article>
+                    );
+                })}
             </div>
         </Styled.Wrapper>
     );

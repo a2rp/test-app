@@ -1,108 +1,140 @@
+import {
+    FiArrowUpRight,
+    FiCode,
+    FiGithub,
+    FiGlobe,
+    FiLayers,
+    FiLinkedin,
+    FiMapPin,
+} from "react-icons/fi";
+
 import { Styled } from "./styled";
+
+const highlights = [
+    {
+        label: "Focus",
+        value: "Frontend Systems",
+        icon: FiLayers,
+    },
+    {
+        label: "Approach",
+        value: "Build & Experiment",
+        icon: FiCode,
+    },
+    {
+        label: "Location",
+        value: "Bengaluru, India",
+        icon: FiMapPin,
+    },
+];
 
 function AboutSection() {
     return (
         <Styled.Wrapper id="about">
-            <div className="sectionTop">
-                <span className="sectionIndex">05 / ABOUT THE LAB</span>
+            <div className="sectionHeader">
+                <span className="sectionLabel">05 / ABOUT</span>
 
                 <p>
-                    a2rp LAB is a personal experimentation space for exploring
-                    ideas across code, interfaces, systems and emerging
-                    technology.
+                    The person behind the experiments, interfaces and ideas
+                    explored throughout test-app.
                 </p>
             </div>
 
-            <div className="statement">
-                <h2>
-                    Built to explore.
-                    <span>Designed to evolve.</span>
-                </h2>
-            </div>
-
             <div className="aboutGrid">
-                <div className="aboutCopy">
-                    <span className="copyLabel">LAB PHILOSOPHY</span>
+                <div className="visualColumn">
+                    <div className="imageWrapper">
+                        <img
+                            src="https://picsum.photos/seed/test-app-about/1000/1200"
+                            alt="Abstract creative workspace"
+                            loading="lazy"
+                        />
 
-                    <p>
-                        The goal is not to build everything perfectly on the
-                        first attempt. The goal is to build, observe, break,
-                        understand and improve.
-                    </p>
+                        <div className="imageOverlay" />
 
-                    <p>
-                        Every experiment becomes a small record of learning,
-                        whether it turns into a finished product or simply
-                        reveals a better direction.
-                    </p>
+                        <div className="imageLabel">
+                            <span>CREATIVE SYSTEM</span>
+                            <strong>2026</strong>
+                        </div>
+
+                        <div className="imageCorner">
+                            <FiCode />
+                        </div>
+                    </div>
                 </div>
 
-                <div className="identityPanel">
-                    <div className="identityHeader">
-                        <span>CREATOR_PROFILE.sys</span>
-                        <span>ACTIVE</span>
+                <div className="contentColumn">
+                    <span className="smallLabel">CREATOR / DEVELOPER</span>
+
+                    <h2>
+                        Ashish
+                        <span>Ranjan.</span>
+                    </h2>
+
+                    <p className="intro">
+                        Full-stack web developer focused on building modern
+                        interfaces, reusable frontend systems and practical web
+                        experiments.
+                    </p>
+
+                    <p className="description">
+                        test-app is a space for exploring ideas without the
+                        constraints of a traditional product. It is used to
+                        prototype interfaces, test creative concepts, learn new
+                        techniques and turn experiments into working
+                        experiences.
+                    </p>
+
+                    <div className="highlights">
+                        {highlights.map((item) => {
+                            const Icon = item.icon;
+
+                            return (
+                                <div className="highlightItem" key={item.label}>
+                                    <span className="highlightIcon">
+                                        <Icon />
+                                    </span>
+
+                                    <div>
+                                        <span>{item.label}</span>
+                                        <strong>{item.value}</strong>
+                                    </div>
+                                </div>
+                            );
+                        })}
                     </div>
 
-                    <div className="identityBody">
-                        <div className="identityMark">
-                            <span>AR</span>
-                        </div>
-
-                        <div className="identityContent">
-                            <span className="identityLabel">
-                                CREATOR / DEVELOPER
-                            </span>
-
-                            <h3>Ashish Ranjan</h3>
-
-                            <p>
-                                Full-Stack Web Developer exploring modern
-                                frontend systems, backend engineering, creative
-                                coding, AI and experimental technology.
-                            </p>
-
-                            <div className="identityMeta">
-                                <span>React</span>
-                                <span>Node.js</span>
-                                <span>Creative Coding</span>
-                                <span>AI</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="identityFooter">
+                    <div className="actions">
                         <a
+                            className="primaryLink"
                             href="https://www.ashishranjan.net"
                             target="_blank"
                             rel="noreferrer"
                         >
-                            View Portfolio
-                            <span>↗</span>
+                            <FiGlobe />
+                            <span>Portfolio</span>
+                            <FiArrowUpRight />
                         </a>
 
                         <a
+                            className="iconLink"
                             href="https://github.com/a2rp"
                             target="_blank"
                             rel="noreferrer"
+                            aria-label="GitHub"
                         >
-                            GitHub
-                            <span>↗</span>
+                            <FiGithub />
+                        </a>
+
+                        <a
+                            className="iconLink"
+                            href="https://www.linkedin.com/in/aashishranjan"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="LinkedIn"
+                        >
+                            <FiLinkedin />
                         </a>
                     </div>
-                </div>
-            </div>
-
-            <div className="manifesto">
-                <div className="manifestoLabel">
-                    <span>LAB MANIFESTO</span>
-                    <span>2026</span>
-                </div>
-
-                <div className="manifestoText">
-                    <span>BUILD</span>
-                    <span>BREAK</span>
-                    <span>LEARN</span>
-                    <span>REPEAT</span>
                 </div>
             </div>
         </Styled.Wrapper>

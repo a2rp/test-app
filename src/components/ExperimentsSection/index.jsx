@@ -1,3 +1,11 @@
+import {
+    FiActivity,
+    FiArrowUpRight,
+    FiCpu,
+    FiGrid,
+    FiLayers,
+} from "react-icons/fi";
+
 import { Styled } from "./styled";
 
 const experiments = [
@@ -10,6 +18,8 @@ const experiments = [
             "A responsive interaction study exploring modular layouts, adaptive states and interface behavior.",
         tags: ["React", "UI", "Responsive"],
         visual: "interface",
+        image: "https://picsum.photos/seed/test-app-interface/1200/900",
+        icon: FiLayers,
     },
     {
         id: "EXP-002",
@@ -20,6 +30,8 @@ const experiments = [
             "A visual experiment inspired by neural networks, signal processing and machine-assisted interfaces.",
         tags: ["AI", "Data", "Motion"],
         visual: "signal",
+        image: "https://picsum.photos/seed/test-app-neural/1200/900",
+        icon: FiActivity,
     },
     {
         id: "EXP-003",
@@ -30,6 +42,8 @@ const experiments = [
             "An evolving grid system designed around depth, motion, geometry and procedural visual structures.",
         tags: ["Creative Code", "Geometry", "Web"],
         visual: "grid",
+        image: "https://picsum.photos/seed/test-app-spatial/1200/900",
+        icon: FiGrid,
     },
     {
         id: "EXP-004",
@@ -40,6 +54,8 @@ const experiments = [
             "A technical interface concept focused on system monitoring, status visualization and control surfaces.",
         tags: ["Prototype", "System UI", "Data"],
         visual: "core",
+        image: "https://picsum.photos/seed/test-app-system/1200/900",
+        icon: FiCpu,
     },
 ];
 
@@ -108,7 +124,7 @@ function ExperimentVisual({ type }) {
             <div className="coreRing ringInner" />
 
             <div className="systemCore">
-                <span>a2</span>
+                <FiCpu />
             </div>
         </div>
     );
@@ -135,42 +151,61 @@ function ExperimentsSection() {
             </div>
 
             <div className="experimentGrid">
-                {experiments.map((experiment) => (
-                    <article className="experimentCard" key={experiment.id}>
-                        <div className="visualArea">
-                            <div className="visualMeta">
-                                <span>{experiment.id}</span>
+                {experiments.map((experiment) => {
+                    const Icon = experiment.icon;
 
-                                <span className="status">
-                                    <span className="statusDot" />
-                                    {experiment.status}
+                    return (
+                        <article className="experimentCard" key={experiment.id}>
+                            <div className="visualArea">
+                                <img
+                                    className="visualImage"
+                                    src={experiment.image}
+                                    alt=""
+                                    loading="lazy"
+                                />
+
+                                <div className="visualImageOverlay" />
+
+                                <div className="visualMeta">
+                                    <span>{experiment.id}</span>
+
+                                    <span className="status">
+                                        <span className="statusDot" />
+                                        {experiment.status}
+                                    </span>
+                                </div>
+
+                                <div className="visualIcon">
+                                    <Icon />
+                                </div>
+
+                                <ExperimentVisual type={experiment.visual} />
+
+                                <span className="categoryBadge">
+                                    {experiment.category}
                                 </span>
                             </div>
 
-                            <ExperimentVisual type={experiment.visual} />
+                            <div className="cardContent">
+                                <div className="cardHeading">
+                                    <h3>{experiment.title}</h3>
 
-                            <span className="categoryBadge">
-                                {experiment.category}
-                            </span>
-                        </div>
+                                    <span className="cardArrow">
+                                        <FiArrowUpRight />
+                                    </span>
+                                </div>
 
-                        <div className="cardContent">
-                            <div className="cardHeading">
-                                <h3>{experiment.title}</h3>
+                                <p>{experiment.description}</p>
 
-                                <span className="cardArrow">↗</span>
+                                <div className="tags">
+                                    {experiment.tags.map((tag) => (
+                                        <span key={tag}>{tag}</span>
+                                    ))}
+                                </div>
                             </div>
-
-                            <p>{experiment.description}</p>
-
-                            <div className="tags">
-                                {experiment.tags.map((tag) => (
-                                    <span key={tag}>{tag}</span>
-                                ))}
-                            </div>
-                        </div>
-                    </article>
-                ))}
+                        </article>
+                    );
+                })}
             </div>
         </Styled.Wrapper>
     );

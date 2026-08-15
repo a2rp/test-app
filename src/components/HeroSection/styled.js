@@ -64,7 +64,7 @@ export const Styled = {
             width: min(760px, 58%);
         }
 
-        .eyebrow {
+        .label {
             display: flex;
             align-items: center;
             gap: 0.75rem;
@@ -138,6 +138,16 @@ export const Styled = {
             border-color: #f4f4f4;
         }
 
+        .primaryCta svg {
+            flex: 0 0 auto;
+            font-size: 1rem;
+            transition: transform 0.25s ease;
+        }
+
+        .primaryCta:hover svg {
+            transform: translate(3px, 3px);
+        }
+
         .labPanel {
             position: absolute;
             z-index: 2;
@@ -167,6 +177,16 @@ export const Styled = {
             letter-spacing: 0.14em;
         }
 
+        .panelTitle {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+        }
+
+        .panelTitle svg {
+            font-size: 0.85rem;
+        }
+
         .panelDots {
             display: flex;
             gap: 6px;
@@ -192,8 +212,19 @@ export const Styled = {
             font-size: 0.75rem;
         }
 
-        .terminalPrompt {
+        .terminalIcon {
+            flex: 0 0 auto;
+            margin-top: 1px;
+            color: #888892;
+            font-size: 0.85rem;
+        }
+
+        .terminalLine:first-child .terminalIcon {
             color: #f4f4f4;
+        }
+
+        .terminalLine.success .terminalIcon {
+            color: #b9b9c1;
         }
 
         .terminalLine.dim {
@@ -314,6 +345,15 @@ export const Styled = {
             text-transform: uppercase;
             letter-spacing: 0.15em;
             transition: color 0.3s ease;
+        }
+
+        .scrollIndicator svg {
+            font-size: 0.9rem;
+            transition: transform 0.25s ease;
+        }
+
+        .scrollIndicator:hover svg {
+            transform: translateY(4px);
         }
 
         .scrollIndicator:hover {

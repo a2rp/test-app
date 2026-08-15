@@ -78,7 +78,7 @@ export const Styled = {
             justify-self: end;
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.65rem;
             padding: 0.78rem 1rem;
             border: 1px solid rgba(255, 255, 255, 0.14);
             border-radius: 999px;
@@ -89,13 +89,28 @@ export const Styled = {
             transition:
                 background 0.3s ease,
                 color 0.3s ease,
-                border-color 0.3s ease;
+                border-color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .githubIcon {
+            font-size: 1rem;
+        }
+
+        .externalIcon {
+            font-size: 0.9rem;
+            transition: transform 0.25s ease;
         }
 
         .githubLink:hover {
             background: #f4f4f4;
             color: #050509;
             border-color: #f4f4f4;
+            transform: translateY(-2px);
+        }
+
+        .githubLink:hover .externalIcon {
+            transform: translate(2px, -2px);
         }
 
         @media (max-width: 900px) {
