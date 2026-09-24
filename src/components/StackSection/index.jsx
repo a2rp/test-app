@@ -37,7 +37,7 @@ const stackItems = [
     {
         title: "JavaScript",
         category: "Logic",
-        text: "Modern JavaScript powering interactions, data flow, animation logic and experimental behavior.",
+        text: "Modern JavaScript powering interactions, data flow, interaction logic and experimental behavior.",
         icon: FiCode,
     },
     {

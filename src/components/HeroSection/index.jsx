@@ -32,7 +32,7 @@ function HeroSection() {
                 <div className="heroBottom">
                     <p>
                         test-app is a digital playground for experiments in
-                        code, interfaces, AI, creative technology and emerging
+                        code, interfaces, creative technology and emerging
                         web ideas.
                     </p>
 
@@ -117,7 +117,7 @@ function HeroSection() {
             <div className="heroMeta">
                 <span>Creative Coding</span>
                 <span>Interfaces</span>
-                <span>AI</span>
+                <span>Prototypes</span>
                 <span>Experiments</span>
             </div>
 

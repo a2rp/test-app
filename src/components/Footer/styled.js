@@ -133,6 +133,25 @@ export const Styled = {
             text-transform: uppercase;
         }
 
+        .iconLinks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .iconLinks .iconLink {
+            width: 36px;
+            height: 36px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 8px;
+        }
+
+        .iconLinks .iconLink:hover {
+            transform: none;
+        }
         .linkGroup a {
             display: inline-flex;
             align-items: center;
@@ -212,7 +231,6 @@ export const Styled = {
             border-radius: 50%;
             background: #8e8e96;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.24);
-            animation: statusPulse 2s ease-in-out infinite;
         }
 
         .backToTop {

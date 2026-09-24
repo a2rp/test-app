@@ -68,7 +68,6 @@ export const Styled = {
             border-radius: 50%;
             background: #bebec7;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.45);
-            animation: statusPulse 1.8s ease-in-out infinite;
         }
 
         .metricsGrid {
@@ -153,7 +152,6 @@ export const Styled = {
             flex: 1;
             min-width: 3px;
             background: linear-gradient(to top, #27272f, #73737e);
-            animation: metricPulse 1.6s ease-in-out infinite alternate;
         }
 
         .metricSignal span:nth-child(1) {
@@ -162,27 +160,22 @@ export const Styled = {
 
         .metricSignal span:nth-child(2) {
             height: 58%;
-            animation-delay: 0.1s;
         }
 
         .metricSignal span:nth-child(3) {
             height: 84%;
-            animation-delay: 0.2s;
         }
 
         .metricSignal span:nth-child(4) {
             height: 47%;
-            animation-delay: 0.3s;
         }
 
         .metricSignal span:nth-child(5) {
             height: 72%;
-            animation-delay: 0.4s;
         }
 
         .metricSignal span:nth-child(6) {
             height: 38%;
-            animation-delay: 0.5s;
         }
 
         .telemetryPanel {

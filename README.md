@@ -1,94 +1,42 @@
-# test-app
+# Test App
 
-An experimental frontend playground for creative coding, modern interfaces, AI concepts, and web experiments.
+Test App is a React and Vite playground for interface studies, prototypes, creative coding and modern frontend concepts. It presents experiments, the tools behind them and a short process for shaping ideas into usable interfaces.
 
-## Preview
-
-![test-app Preview](./preview.png)
+![Test App preview](screenshot.png)
 
 ## Features
 
-- Modern responsive interface
-- Experimental UI concepts
-- React Icons integration
-- Picsum-based visual elements
-- Interactive experiment cards
-- Process and stack sections
-- Creator profile section
-- Social and support links
-- Responsive layout
+- Responsive fixed header with mobile navigation
+- Interface studies with local visual assets
+- Stack, process, metrics and creator sections
+- Icon-only social and support links in the footer
 - GitHub Pages deployment
 
-## Tech Stack
+## Tech stack
 
-- React
-- Vite
-- Styled Components
-- React Icons
-- JavaScript
+React, Vite, styled-components, React Icons and JavaScript.
 
-## Run Locally
+## Run locally
 
-```bash
-npm install
-npm run dev
-```
+    git clone https://github.com/a2rp/test-app.git
+    cd test-app
+    npm install
+    npm run dev
 
-## Build
+## Deployment
 
-```bash
-npm run build
-```
+Live: [https://a2rp.github.io/test-app/](https://a2rp.github.io/test-app/)
 
-## Deploy
+Deploy with:
 
-```bash
-npm run deploy
-```
+    npm run deploy
 
-## Author
+## Future possibilities
 
-**Ashish Ranjan**
-
-- Portfolio: https://www.ashishranjan.net
-- GitHub: https://github.com/a2rp
-- CodePen: https://codepen.io/ash1198
-- LinkedIn: https://www.linkedin.com/in/aashishranjan
-- Facebook: https://www.facebook.com/theash.ashish/
-- YouTube: https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1
-- Email: mailto:ash.ranjan09@gmail.com
-
-## Support
-
-- Support: https://a2rp-donation-page.netlify.app/
-- Buy Me A Coffee: https://buymeacoffee.com/a2rp
-- Patreon: https://patreon.com/a2rp
-
-## License
-
-MIT License
+The playground can grow with more focused interface studies, reusable components and small accessibility or performance experiments.
 
 ## Links
 
-- Portfolio: [https://www.ashishranjan.net](https://www.ashishranjan.net)
-- GitHub: [https://github.com/a2rp](https://github.com/a2rp)
-- CodePen: [https://codepen.io/ash1198](https://codepen.io/ash1198)
-- LinkedIn: [https://www.linkedin.com/in/aashishranjan](https://www.linkedin.com/in/aashishranjan)
-- Facebook: [https://www.facebook.com/theash.ashish/](https://www.facebook.com/theash.ashish/)
-- YouTube: [https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1](https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1)
-- Email: [ash.ranjan09@gmail.com](mailto:ash.ranjan09@gmail.com)
-
-## Support
-
-- Support: [https://a2rp-donation-page.netlify.app/](https://a2rp-donation-page.netlify.app/)
-- Buy Me A Coffee: [https://buymeacoffee.com/a2rp](https://buymeacoffee.com/a2rp)
-- Patreon: [https://patreon.com/a2rp](https://patreon.com/a2rp)
-<!-- Project links -->
-
-## Links
-
-- Live: [https://a2rp.github.io/test-app/](https://a2rp.github.io/test-app/)
-- Repository: [https://github.com/a2rp/test-app](https://github.com/a2rp/test-app)
 - Portfolio: [https://www.ashishranjan.net/](https://www.ashishranjan.net/)
 - GitHub: [https://github.com/a2rp](https://github.com/a2rp)
 - CodePen: [https://codepen.io/ash1198](https://codepen.io/ash1198)

@@ -311,20 +311,17 @@ export const Styled = {
         .orbitOne {
             width: 100%;
             height: 100%;
-            animation: rotate 24s linear infinite;
         }
 
         .orbitTwo {
             width: 72%;
             height: 72%;
             border-style: dashed;
-            animation: rotateReverse 18s linear infinite;
         }
 
         .orbitThree {
             width: 44%;
             height: 44%;
-            animation: rotate 14s linear infinite;
         }
 
         .signalCore {
@@ -463,14 +460,12 @@ export const Styled = {
         .ringOuter {
             width: 100%;
             height: 100%;
-            animation: rotate 30s linear infinite;
         }
 
         .ringMiddle {
             width: 70%;
             height: 70%;
             border-style: dashed;
-            animation: rotateReverse 22s linear infinite;
         }
 
         .ringInner {

@@ -18,19 +18,19 @@ const experiments = [
             "A responsive interaction study exploring modular layouts, adaptive states and interface behavior.",
         tags: ["React", "UI", "Responsive"],
         visual: "interface",
-        image: "https://picsum.photos/seed/test-app-interface/1200/900",
+        image: import.meta.env.BASE_URL + "images/interface-study.jpg",
         icon: FiLayers,
     },
     {
         id: "EXP-002",
         title: "Neural Signal",
-        category: "AI Concept",
+        category: "Signal Study",
         status: "RESEARCH",
         description:
-            "A visual experiment inspired by neural networks, signal processing and machine-assisted interfaces.",
-        tags: ["AI", "Data", "Motion"],
+            "A visual experiment inspired by neural networks, signal processing and signal-driven interfaces.",
+        tags: ["Signal", "Data", "Motion"],
         visual: "signal",
-        image: "https://picsum.photos/seed/test-app-neural/1200/900",
+        image: import.meta.env.BASE_URL + "images/signal-study.jpg",
         icon: FiActivity,
     },
     {
@@ -42,7 +42,7 @@ const experiments = [
             "An evolving grid system designed around depth, motion, geometry and procedural visual structures.",
         tags: ["Creative Code", "Geometry", "Web"],
         visual: "grid",
-        image: "https://picsum.photos/seed/test-app-spatial/1200/900",
+        image: import.meta.env.BASE_URL + "images/spatial-grid.jpg",
         icon: FiGrid,
     },
     {
@@ -54,7 +54,7 @@ const experiments = [
             "A technical interface concept focused on system monitoring, status visualization and control surfaces.",
         tags: ["Prototype", "System UI", "Data"],
         visual: "core",
-        image: "https://picsum.photos/seed/test-app-system/1200/900",
+        image: import.meta.env.BASE_URL + "images/system-core.jpg",
         icon: FiCpu,
     },
 ];

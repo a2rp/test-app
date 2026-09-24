@@ -279,7 +279,6 @@ export const Styled = {
             flex: 1;
             min-width: 4px;
             background: linear-gradient(to top, #33333b, #8e8e9a);
-            animation: pulse 1.8s ease-in-out infinite alternate;
         }
 
         .signal span:nth-child(1) {
@@ -288,37 +287,30 @@ export const Styled = {
 
         .signal span:nth-child(2) {
             height: 48%;
-            animation-delay: 0.1s;
         }
 
         .signal span:nth-child(3) {
             height: 78%;
-            animation-delay: 0.2s;
         }
 
         .signal span:nth-child(4) {
             height: 55%;
-            animation-delay: 0.3s;
         }
 
         .signal span:nth-child(5) {
             height: 92%;
-            animation-delay: 0.4s;
         }
 
         .signal span:nth-child(6) {
             height: 67%;
-            animation-delay: 0.5s;
         }
 
         .signal span:nth-child(7) {
             height: 38%;
-            animation-delay: 0.6s;
         }
 
         .signal span:nth-child(8) {
             height: 72%;
-            animation-delay: 0.7s;
         }
 
         .heroMeta {
